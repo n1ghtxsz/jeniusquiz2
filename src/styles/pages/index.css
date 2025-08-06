@@ -1,0 +1,157 @@
+.button {
+    box-shadow: 2px 2px 2px grey;
+}
+
+.button:hover {
+    transition: ease 0.3s;
+    cursor: pointer;
+    filter: opacity(0.8);
+    outline: medium red solid;
+}
+
+#social {
+    gap: 9px;
+}
+
+.box-1 {
+    border: 3px black solid;
+    width: 700px;
+    height: 400px;
+    margin-left: 35px;
+    padding: 12px;
+    box-shadow: 3px 3px 3px grey;
+    text-align: left;
+}
+
+.cent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: block;
+    border: grey 3px solid;
+    width: 800px;
+    height: 940px;
+    box-shadow: -10px 0 15px grey, 10px 0 15px grey;
+    justify-content: space-around;
+    background-color: #fff;
+    text-align: center;
+}
+
+.bg-1 {
+    width: 728px;
+    background-color: darkgrey;
+    color: darkgrey;
+    margin-left: 35px;
+}
+
+.backbutton {
+    width: 150px;
+    height: 30px;
+    box-shadow: 3px 3px 3px grey;
+    margin-top: 5px;
+}
+
+.pointer:hover {
+    cursor: pointer;
+}
+
+.custom-button {
+    background-color: white;
+    border: 10px solid #F0A500;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 5px #A55F00;
+    width: 300px; /* Largura fixa */
+    height: 80px; /* Altura fixa */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.custom-button:hover {
+    background-color: limegreen;
+}
+
+.borda-pergunta {
+    border: 3px solid grey;
+    box-shadow: 3px 3px 5px grey;
+    box-sizing: border-box;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+div#social>a>img {
+    width: 50px;
+}
+
+.newtralstudios {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.fail {
+    margin: 0 auto;
+}
+
+.fail {
+    font-family: Caveat;
+    font-size: 150px;
+    border: 3px solid grey;
+    box-shadow: 3px 3px 3px grey;
+    user-select: none;
+    background-color: transparent;
+}
+
+.fail:hover {
+    cursor: pointer;
+    color: darkgreen;
+}
+
+#mensagem {
+    visibility: hidden;
+    margin-top: 50px;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+}
+
+button.rounded-5:hover {
+    transition: ease 0.2s;
+    background-color: red;
+}
+
+button.rounded-5 {
+    border: 3px solid rgba(0, 0, 0, 0.584);
+}
+button.green:hover {
+    transition: ease 0.2s;
+    background-color: darkgreen;
+}
+
+div#escondido {
+    margin-left: 900px;
+    font-size: 28px;
+    font-family: Jost;
+    width: 120px;
+    opacity: 0;
+}
+
+div#escondido:hover {
+    opacity: 1;
+    cursor: pointer;
+    border: 8px solid black;
+    background-color: purple;
+    color: white;
+    border-radius: 50%;
+}

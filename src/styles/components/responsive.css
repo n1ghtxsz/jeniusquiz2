@@ -1,0 +1,140 @@
+/* MOBILE */
+@media screen and (max-width: 799px) {
+    span.text-center {
+        display: block;
+    }
+
+    img.brain {
+        width: 400px;
+    }
+
+    div.buttons {
+        flex-direction: column;
+    }
+
+    div.buttons {
+        margin-top: 50px;
+    }
+
+    #startbutton {
+        margin-top: 50px;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+
+    button.relatorio {
+        visibility: hidden;
+    }
+
+    div.question {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    div#startbutton {
+        width: 240px;
+        height: 120px;
+    }
+
+    div.fail {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    div.fail>h1 {
+        font-family: Caveat;
+        border: 3px solid grey;
+        box-shadow: 3px 3px 3px grey;
+        user-select: none;
+        font-size: 80px;  
+    }
+
+    div.fail>h1:hover {
+        cursor: pointer;
+        color: purple;
+    }
+}
+
+/* NOTEBOOK */
+
+@media screen and (min-width: 800px) and (max-width: 1492px) {
+
+    img.brain {
+        width: 800px;
+    }
+
+    span.text-center {
+        display: none;
+    }
+
+    div.buttons {
+        margin-top: 50px;
+    }
+
+    #startbutton {
+        margin-top: 50px;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    div.question {
+        gap: 50px;
+    }
+
+    div.fail {
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    div.fail>h1 {
+        font-family: Caveat;
+        border: 3px solid grey;
+        box-shadow: 3px 3px 3px grey;
+        user-select: none;
+        font-size: 120px;  
+    }
+
+    div.fail>h1:hover {
+        cursor: pointer;
+        color: darkslateblue;
+    }
+
+    div#startbutton {
+        width: 350px;
+        height: 150px;
+    }
+}
+
+/* PC */
+
+@media screen and (min-width: 1493px) {
+    div.buttons {
+        margin-top: 100px;
+    }
+
+    span.text-center {
+        display: none;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin-bottom: 10px;
+    }
+
+    div.question {
+        gap: 50px;
+    }
+
+    #startbutton {
+        margin-top: 100px;
+    }
+}

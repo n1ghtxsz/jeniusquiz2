@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="x/icon" href="src/assets/images/brain_red.png">
+    <link rel="stylesheet" href="src/styles/vendor/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="src/styles/pages/index.css">
+    <link rel="stylesheet" href="src/styles/components/responsive.css">
+    <link rel="stylesheet" href="src/styles/global.css">
+    <link rel="stylesheet" href="src/styles/components/animations.css">
+    <title>Jenius Quiz 2</title>
+</head>
+
+<body transition-style="out:circle:center">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <main class="mt-5 d-flex justify-content-center align-items-center flex-column">
+            <span class="text-center">Esta é a versão Mobile</span>
+            <div class="d-flex align-items-center mt-5">
+                <img src="src/assets/images/brain_red2.png" class="brain mx-auto">
+            </div>
+            <div class="buttons d-flex mx-auto gap-3">
+                <a href="src/pages/instruction.html">
+                    <img src="src/assets/images/instruction.png" width="220px" height="120px" class="button">
+                </a>
+                <a id="game_button">
+                    <img src="src/assets/images/play_button.png" width="220px" height="120px"
+                        class="button circle-out-center">
+                </a>
+                <a href="src/pages/credits.html">
+                    <img src="src/assets/images/credits.png" width="220px" height="120px" class="button">
+                </a>
+            </div>
+        </main>
+        <section class="game d-none d-flex flex-column justify-content-center align-items-center vh-100">
+            <div>
+                <div id="q1" class="">
+                    <h1 class="borda-pergunta">1. Qual mês foi lançado o Jenius Quiz 1?</h1>
+                    <div class="question d-flex my-auto mt-5">
+                        <button class="custom-button">Agosto</button>
+                        <button class="custom-button" onclick="showNextQuestion('q1', 'q2')">Setembro</button>
+                        <button class="custom-button">Junho</button>
+                        <button class="custom-button">Julho</button>
+                    </div>
+                </div>
+                <div id="q2" class="d-none">
+                    <h1 class="borda-pergunta">2. O que retrata a medida anos-luz?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Velocidade</button>
+                        <button class="custom-button">Saturação da Luz</button>
+                        <button class="custom-button">Tempo</button>
+                        <button class="custom-button" onclick="showNextQuestion('q2', 'q3')">Distância</button>
+                    </div>
+                </div>
+                <div id="q3" class="d-none">
+                    <h1 class="borda-pergunta">3. Que vitamina é responsável por uma mineralização óssea adequada?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Vitamina C</button>
+                        <button class="custom-button" onclick="showNextQuestion('q3', 'q4')">Vitamina D</button>
+                        <button class="custom-button">Vitamina A</button>
+                        <button class="custom-button">Vitamina PP</button>
+                    </div>
+                </div>
+                <div id="q4" class="d-none">
+                    <h1 class="borda-pergunta">4. Quantos fusos horários existem no mundo?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q4', 'q5')">24</button>
+                        <button class="custom-button">38</button>
+                        <button class="custom-button">12</button>
+                        <button class="custom-button">18</button>
+                    </div>
+                </div>
+                <div id="q5" class="d-none">
+                    <h1 class="borda-pergunta">5. Qual era o nome de Constantinopla até 330 d.C?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Birmânia</button>
+                        <button class="custom-button">Osmania</button>
+                        <button class="custom-button" onclick="showNextQuestion('q5', 'q6')">Bizâncio</button>
+                        <button class="custom-button">Istambul</button>
+                    </div>
+                </div>
+                <div id="q6" class="d-none">
+                    <h1 class="borda-pergunta">6. A arte japonesa de dobrar papel é conhecida como:</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Neburino</button>
+                        <button class="custom-button" onclick="showNextQuestion('q6', 'q7')">Origami</button>
+                        <button class="custom-button">Koshiniwa</button>
+                        <button class="custom-button">Wabi-sabi</button>
+                    </div>
+                </div>
+                <div id="q7" class="d-none">
+                    <h1 class="borda-pergunta">7. Qual era o nome do amigo e companheiro de Sherlock Holmes?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q7', 'q8')">Watson</button>
+                        <button class="custom-button">Bruce</button>
+                        <button class="custom-button">Cobre</button>
+                        <button class="custom-button">Doyle</button>
+                    </div>
+                </div>
+                <div id="q8" class="d-none">
+                    <h1 class="borda-pergunta">8. Qual é o nome da rena do nariz vermelho do Papai Noel?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Rudy</button>
+                        <button class="custom-button">Beleza</button>
+                        <button class="custom-button">Adolfo</button>
+                        <button class="custom-button" onclick="showNextQuestion('q8', 'q9')">Rudolf</button>
+                    </div>
+                </div>
+                <div id="q9" class="d-none">
+                    <h1 class="borda-pergunta">9. No Minecraft, qual é a definição para a sigla HG, de modo popular
+                    </h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Hardicore Games</button>
+                        <button class="custom-button" onclick="showNextQuestion('q9', 'q10')">Hunger Games</button>
+                        <button class="custom-button">Health Games</button>
+                        <button class="custom-button">Hungary Games</button>
+                    </div>
+                </div>
+                <div id="q10" class="d-none">
+                    <h1 class="borda-pergunta">10. O que significa a sigla FPS?, em games.</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Flame Person Shooter</button>
+                        <button class="custom-button">Fire Person Shooter</button>
+                        <button class="custom-button" onclick="showNextQuestion('q10', 'q11')">First Person Shooter</button>
+                        <button class="custom-button">Flick Person Shooter</button>
+                    </div>
+                </div>
+                <div id="q11" class="d-none">
+                    <h1 class="borda-pergunta">11. Escolha corretamente</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <div class="w-75 border border-5 border-dark p-3 gap-5 mx-auto my-auto">
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5 green"
+                                onclick="showNextQuestion('q11', 'q12')"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+                            <button style="width: 40px; height: 40px;" class="rounded-5"></button>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="q12" class="d-none">
+                    <h1 class="borda-pergunta">12. No Roblox como eram chamados os "sem-conta"?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Users</button>
+                        <button class="custom-button" onclick="showNextQuestion('q12', 'q13')">Guest</button>
+                        <button class="custom-button">Nomes Aleátorios</button>
+                        <button class="custom-button">Robloxians1</button>
+                    </div>
+                </div>
+                <div id="q13" class="d-none">
+                    <h1 class="borda-pergunta">13. Quais são as dimensões do campo de futebol?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q13', 'q14')">105 x 68 m</button>
+                        <button class="custom-button">120 x 70 m</button>
+                        <button class="custom-button">110 x 68m</button>
+                        <button class="custom-button">105 x 82 m</button>
+                    </div>
+                </div>
+                <div id="q14" class="d-none">
+                    <h1 class="borda-pergunta">14. No Fortnite, como se chama a skin mais valorizada?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Cavaleira Rubra</button>
+                        <button class="custom-button">Ikonik</button>
+                        <button class="custom-button">Galaxy</button>
+                        <button class="custom-button" onclick="showNextQuestion('q14', 'q15')">Renegade Raider</button>
+                    </div>
+                </div>
+                <div id="q15" class="d-none">
+                    <h1 class="borda-pergunta">15. Qual era a cor exata do Jenius Quiz 1?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q15', 'q16')"><div style="width: 130px; height: 20px; background-color: #FFB6C1;" class="rounded-4"></div></button>
+                        <button class="custom-button"><div style="width: 130px; height: 20px; background-color: #f0dee1;" class="rounded-4"></div></button>
+                        <button class="custom-button"><div style="width: 130px; height: 20px; background-color: #e1bac0;" class="rounded-4"></div></button>
+                        <button class="custom-button"><div style="width: 130px; height: 20px; background-color: #e88695;" class="rounded-4"></div></button>
+                    </div>
+                </div>
+                <div id="q16" class="d-none">
+                    <h1 class="borda-pergunta">16. Qual a gravidade da Lua?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">1,86 m/s²</button>
+                        <button class="custom-button" onclick="showNextQuestion('q16', 'q17')">1,62 m/s²</button>
+                        <button class="custom-button">2,69 m/s²</button>
+                        <button class="custom-button">3,27 m/s²</button>
+                    </div>
+                </div>
+                <div id="q17" class="d-none">
+                    <h1 class="borda-pergunta">17. Qual a resposta da pergunta 4?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">38</button>
+                        <button class="custom-button" onclick="showNextQuestion('q17', 'q18')">24</button>
+                        <button class="custom-button">18</button>
+                        <button class="custom-button">12</button>
+                    </div>
+                </div>
+                <div id="q18" class="d-none">
+                    <h1 class="borda-pergunta">18. O que faltou na pergunta da questão 9?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q18', 'q19')">?</button>
+                        <button class="custom-button">.</button>
+                        <button class="custom-button">ta certa</button>
+                        <button class="custom-button">resposta</button>
+                    </div>
+                </div>
+                <div id="q19" class="d-none">
+                    <h1 class="borda-pergunta">19. 1 byte = ? bits</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">10</button>
+                        <button class="custom-button">1024</button>
+                        <button class="custom-button" onclick="showNextQuestion('q19', 'q20')">8</button>
+                        <button class="custom-button">256</button>
+                    </div>
+                </div>
+                <div id="q20" class="d-none">
+                    <h1 class="borda-pergunta">20. De onde é a Shakira?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Portugal</button>
+                        <button class="custom-button" onclick="showNextQuestion('q20', 'q21')">Colômbia</button>
+                        <button class="custom-button">Canadá</button>
+                        <button class="custom-button">Brasil</button>
+                    </div>
+                </div>
+                <div id="q21" class="d-none">
+                    <h1 class="borda-pergunta">21. Soma de possíveis respostas até aqui KKK</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">435</button>
+                        <button class="custom-button">532</button>
+                        <button class="custom-button">475</button>
+                        <button class="custom-button">456</button>
+                    </div>
+                    <div id="escondido" onclick="showNextQuestion('q21', 'q22')">KKKKKKKKKKKK</div>
+                </div>
+                <div id="q22" class="d-none">
+                    <h1 class="borda-pergunta">22. Três esquerdas formas uma?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Parábola</button>
+                        <button class="custom-button">Esquerda</button>
+                        <button class="custom-button" onclick="showNextQuestion('q22', 'q23')">Direita</button>
+                        <button class="custom-button">Reta</button>
+                    </div>
+                </div>
+                <div id="q23" class="d-none">
+                    <h1 class="borda-pergunta">23. Oposto do lado esquerdo contrário invertido e refletido</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Cima</button>
+                        <button class="custom-button" onclick="showNextQuestion('q23', 'q24')">Esquerda</button>
+                        <button class="custom-button">Direita</button>
+                        <button class="custom-button">Baixo</button>
+                    </div>
+                </div>
+                <div id="q24" class="d-none">
+                    <h1 class="borda-pergunta">X. Questão?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">23</button>
+                        <button class="custom-button" onclick="showNextQuestion('q24', 'q25')">24</button>
+                        <button class="custom-button">25</button>
+                        <button class="custom-button">22</button>
+                    </div>
+                </div>
+                <div id="q25" class="d-none">
+                    <h1 class="borda-pergunta">25. Em que ano foi criada a expressão: A Cobra vai fumar!?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">1950</button>
+                        <button class="custom-button">1960</button>
+                        <button class="custom-button" onclick="showNextQuestion('q25', 'q26')">1940</button>
+                        <button class="custom-button">1930</button>
+                    </div>
+                </div>
+                <div id="q26" class="d-none">
+                    <h1 class="borda-pergunta">26. Língua criada pensando na comunicação internacional?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Micénico</button>
+                        <button class="custom-button" onclick="showNextQuestion('q26', 'q27')">Esperanto</button>
+                        <button class="custom-button">Espanhol</button>
+                        <button class="custom-button">Inglês</button>
+                    </div>
+                </div>
+                <div id="q27" class="d-none">
+                    <h1 class="borda-pergunta">27. Quantos meses do ano não têm mais de 30 dias?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q27', 'q28')">5</button>
+                        <button class="custom-button">8</button>
+                        <button class="custom-button">6</button>
+                        <button class="custom-button">7</button>
+                    </div>
+                </div>
+                <div id="q28" class="d-none">
+                    <h1 class="borda-pergunta">28. Quando um pato perde a pata, o que acontece?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q28', 'q29')">Manco</button>
+                        <button class="custom-button">Viúvo</button>
+                        <button class="custom-button">Coringou</button>
+                        <button class="custom-button">Bebe álcool</button>
+                    </div>
+                </div>
+                <div id="q29" class="d-none">
+                    <h1 class="borda-pergunta">29. Qual chega?</h1>
+                    <img src="src/assets/images/quest30.png" alt="">
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q29', 'q30')">A</button>
+                        <button class="custom-button">B</button>
+                        <button class="custom-button">C</button>
+                    </div>
+                </div>
+                <div id="q30" class="d-none">
+                    <h1 class="borda-pergunta">30. Quais são as cores?</h1>
+                    <div class="d-flex justify-content-center align-items-center mt-5">
+                        <img src="src/assets/images/Bobs-Logo-300x200.jpg">
+                    </div>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button gap-3">
+                            <div style="width: 20px; height: 45px; background-color: #ff0000;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #fcec16;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #1500ff;" class="rounded-4"></div>
+                        </button>
+                        <button class="custom-button gap-3">
+                            <div style="width: 20px; height: 45px; background-color: #7a0505;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #0000ff;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #dac83e;" class="rounded-4"></div>
+                        </button>
+                        <button class="custom-button gap-3" onclick="showNextQuestion('q30', 'q31')">
+                            <div style="width: 20px; height: 45px; background-color: #fb0301;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #0a208d;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #f7b100;" class="rounded-4"></div>
+                        </button>
+                        <button class="custom-button gap-3">
+                            <div style="width: 20px; height: 45px; background-color: #382bf9;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #e72a2a;" class="rounded-4"></div>
+                            <div style="width: 20px; height: 45px; background-color: #c98311;" class="rounded-4"></div>
+                        </button>
+                    </div>
+                </div>
+                <div id="q31" class="d-none">
+                    <h1 class="borda-pergunta">31. O que há no meio estômago?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Mucosa</button>
+                        <button class="custom-button" onclick="showNextQuestion('q31', 'q32')">ôm</button>
+                        <button class="custom-button">Ácido</button>
+                        <button class="custom-button">Enzimas</button>
+                    </div>
+                </div>
+                <div id="q32" class="d-none">
+                    <h1 class="borda-pergunta">32. Qual é menor?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Nêutron</button>
+                        <button class="custom-button">Elétron</button>
+                        <button class="custom-button">Próton</button>
+                        <button class="custom-button" onclick="showNextQuestion('q32', 'q33')">Fóton</button>
+                    </div>
+                </div>
+                <div id="q33" class="d-none">
+                    <h1 class="borda-pergunta d-flex ">33. <div onclick="showNextQuestion('q33', 'q34')" class="mx-2">Fire </div> em inglês?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Fogo</button>
+                        <button class="custom-button">Chama</button>
+                        <button class="custom-button">Fogaréu</button>
+                        <button class="custom-button">Queima</button>
+                    </div>
+                </div>
+                <div id="q34" class="d-none">
+                    <h1 class="borda-pergunta">34. 7, 14, 28, 56,...</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">105</button>
+                        <button class="custom-button" onclick="showNextQuestion('q34', 'q35')">112</button>
+                        <button class="custom-button">126</button>
+                        <button class="custom-button">119</button>
+                    </div>
+                </div>
+                <div id="q35" class="d-none">
+                    <h1 class="borda-pergunta"><div onclick="showNextQuestion('q35', 'q36')">35</div></h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Esse</button>
+                        <button class="custom-button">Será esse</button>
+                        <button class="custom-button">Talvez esse</button>
+                        <button class="custom-button">Esse aqui</button>
+                    </div>
+                </div>
+                <div id="q36" class="d-none">
+                    <h1 class="borda-pergunta">36. Qual sobrenome é mais comum no Brasil?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Santos</button>
+                        <button class="custom-button">Oliveira</button>
+                        <button class="custom-button" onclick="showNextQuestion('q36', 'q37')">Silva</button>
+                        <button class="custom-button">Souza</button>
+                    </div>
+                </div>
+                <div id="q37" class="d-none">
+                    <h1 class="borda-pergunta">37. Qual substância é mais comum na atmosfera?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Carbono</button>
+                        <button class="custom-button">Oxigênio</button>
+                        <button class="custom-button">Hidrogênio</button>
+                        <button class="custom-button" onclick="showNextQuestion('q37', 'q38')">Nitrogênio</button>
+                    </div>
+                </div>
+                <div id="q38" class="d-none">
+                    <h1 class="borda-pergunta">38. Qual linguagem de programação é a mais utilizada hoje em dia: 2025</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">JavaScript</button>
+                        <button class="custom-button" onclick="showNextQuestion('q38', 'q39')">Python</button>
+                        <button class="custom-button">Java</button>
+                        <button class="custom-button">C#</button>
+                    </div>
+                </div>
+                <div id="q39" class="d-none">
+                    <h1 class="borda-pergunta">X. <-- Próxima questão?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">39</button>
+                        <button class="custom-button" onclick="showNextQuestion('q39', 'q40')">40</button>
+                        <button class="custom-button">41</button>
+                        <button class="custom-button">38</button>
+                    </div>
+                </div>
+                <div id="q40" class="d-none">
+                    <h1 class="borda-pergunta">40. Qual destes números é divisível por 7?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">196</button>
+                        <button class="custom-button">175</button>
+                        <button class="custom-button">153</button>
+                        <button class="custom-button">149</button>
+                    </div>
+                </div>
+                <div id="q41" class="d-none">
+                    <h1 class="borda-pergunta">41. Qual empresa vale mais?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q41', 'q42')">Apple</button>
+                        <button class="custom-button">Microsoft</button>
+                        <button class="custom-button">Facebook</button>
+                        <button class="custom-button">Google</button>
+                    </div>
+                </div>
+                <div id="q42" class="d-none">
+                    <h1 class="borda-pergunta">42. Que forma é esta?</h1>
+                    <div class="d-flex justify-content-center align-items-center mt-5">
+                        <img src="src/assets/images/heptadecagono.png">
+                    </div>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Pentadecágono</button>
+                        <button class="custom-button">Octadecágono</button>
+                        <button class="custom-button" onclick="showNextQuestion('q42', 'q43')">Heptadecágono</button>
+                        <button class="custom-button">Hexadecágono</button>
+                    </div>
+                </div>
+                <div id="q43" class="d-none">
+                    <h1 class="borda-pergunta">43. Qual foi o tipo de bomba utilizado na segunda guerra mundial pelos EUA?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Atômica</button>
+                        <button class="custom-button">Nuclear</button>
+                        <button class="custom-button">Gás</button>
+                        <button class="custom-button">Fumaça</button>
+                    </div>
+                </div>
+                <div id="q44" class="d-none">
+                    <h1 class="borda-pergunta">44. A cada 15 minutos, o ponteiro longo do relógio percorre?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Metade</button>
+                        <button class="custom-button">Três quartos</button>
+                        <button class="custom-button">Todo</button>
+                        <button class="custom-button" onclick="showNextQuestion('q44', 'q45')">Um quarto</button>
+                    </div>
+                </div>
+                <div id="q45" class="d-none">
+                    <h1 class="borda-pergunta">45. O coração bate quantas mil vezes por dia aproximadamente?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q45', 'q46')">100</button>
+                        <button class="custom-button">90</button>
+                        <button class="custom-button">70</button>
+                        <button class="custom-button">150</button>
+                    </div>
+                </div>
+                <div id="q46" class="d-none">
+                    <h1 class="borda-pergunta">46. Qual a capacidade de um CD normal?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">420 mb</button>
+                        <button class="custom-button">250 mb</button>
+                        <button class="custom-button" onclick="showNextQuestion('q46', 'q47')">700 mb</button>
+                        <button class="custom-button">2 GB</button>
+                    </div>
+                </div>
+                <div id="q47" class="d-none">
+                    <h1 class="borda-pergunta">47. Quando um jogar não está no jogo e nem no banco se chama?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Titular</button>
+                        <button class="custom-button">Substituto</button>
+                        <button class="custom-button">Alternativo</button>
+                        <button class="custom-button">Banco</button>
+                    </div>
+                </div>
+                <div id="q48" class="d-none">
+                    <h1 class="borda-pergunta">48. A tanatofobia é o medo de:</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Pessoas</button>
+                        <button class="custom-button">Dançar</button>
+                        <button class="custom-button" onclick="showNextQuestion('q48', 'q49')">Morte</button>
+                        <button class="custom-button">Fantasmas</button>
+                    </div>
+                </div>
+                <div id="q49" class="d-none">
+                    <h1 class="borda-pergunta">49. O que é romboide?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button" onclick="showNextQuestion('q49', 'q50')">Músculo</button>
+                        <button class="custom-button">Polígono</button>
+                        <button class="custom-button">Animal</button>
+                        <button class="custom-button">Fruto</button>
+                    </div>
+                </div>
+                <div id="q50" class="d-none">
+                    <h1 class="borda-pergunta">50. Rouxinol?</h1>
+                    <div class="question d-flex gap-5 my-auto mt-5">
+                        <button class="custom-button">Remédio</button>
+                        <button class="custom-button" onclick="showNextQuestion('q50', 'finish')">Pássaro</button>
+                        <button class="custom-button">Peixe</button>
+                        <button class="custom-button">Marca</button
+                    </div>
+                </div>
+                <div id="finish" class="d-none">
+                    <img src="src/assets/images/brain_red2.png">
+                    <div class="mt-5 d-flex flex-column justify-content-center align-items-center">
+                        <h1>Você conseguiu!</h1>
+                        <p>Parabéns, você completou o Jenius Quiz 2, com muita força, foco e fé.</p>
+                        <form action="">
+                            <button class="backbutton">Ir para o Inicio</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <span class="newtralstudios d-none">
+                <div id="Devs" class="right">
+                    <p class="no-interaction" style="white-space: nowrap;">
+                        <span id="todos">Todos</span> os <span id="direito">direito</span>s reservados <strong>@Newtral Studios</strong>
+                    </p>
+                </div>
+            </span>
+        </section>
+        <span class="death d-none">
+            <main>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="src/assets/images/brain_red2.png" class="brain">
+                </div>
+                <form action="" class="d-flex justify-content-center align-items-center mt-5">
+                    <button class="fail">You Fail</button>
+                </form>
+                <div id="mensagem">↗️ Toque para recomeçar ↖️</div>
+            </main>
+        </span>
+        <footer class="d-flex align-items-center justify-content-between w-100">
+            <p class="my-auto mx-3"><a class="text-danger text-decoration-none">Layout and Development:</a>
+                <strong>@n1ghtxsz;</strong></p>
+            <button type="button" class="relatorio btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                Relatório
+            </button>
+            <div id="social" class="me-3">
+                <a href="https://www.youtube.com/@nightxsz8130" target="_blank"><img
+                        src="src/assets/images/youtube.png"></a>
+                <a href="https://www.twitch.tv/nightxsz" target="_blank"><img src="src/assets/images/twitch.png"></a>
+                <a href="https://discord.gg/5WZQn6HN" target="_blank"><img
+                        src="src/assets/images/png-transparent-discord-logo.png"></a>
+            </div>
+        </footer>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Atualizações</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1. Consertado o exploit de voltar a questão utilizando a opção de voltar do navegador.</p>
+                        <p>2. Consertado o exploit de inspecionar do navegador</p>
+                        <p>3. Agora o jogador não receberá mais tantas dicas visuais em algumas questões.</p>
+                        <p>4. Acessibilidade melhorada.</p>
+                        <p>5. Adicionados conteúdos novos.</p>
+                        <p>6. Caso esteja em uma tela com resolução inferior a 1920x1080 utilize a página em 80%</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/scripts/common/botoes.js"></script>
+    <script src="src/scripts/common/play.js"></script>
+    <script src="src/styles/vendor/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
