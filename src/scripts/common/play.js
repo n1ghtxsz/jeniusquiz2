@@ -30,7 +30,7 @@ document.getElementById('todos').addEventListener('click', function () {
     }
 });
 
-document.querySelector('span#direito').addEventListener('click', function () {
+document.querySelector('span#reserva').addEventListener('click', function () {
     const q47 = document.getElementById('q47')
 
     if (q47 && q47.classList.contains('d-block')) {
