@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         botao.addEventListener('click', function () {
                             document.querySelector('section.game').classList.add('d-none');
                             document.querySelector('span.death').classList.remove('d-none');
+                            const audio = document.getElementById('failsound');
+                            audio.currentTime = 0;
+                            audio.play();
                         });
                     }
                 });
