@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             document.querySelector('section.game').classList.add('d-none');
                             document.querySelector('span.death').classList.remove('d-none');
                             const audio = document.getElementById('failsound');
+                            audio.volume = 1;
                             audio.currentTime = 0;
                             audio.play();
                         });
